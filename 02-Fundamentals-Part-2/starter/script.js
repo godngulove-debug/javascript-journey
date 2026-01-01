@@ -159,8 +159,6 @@ const amin = {
 }
 
 
-*/
-
 const amin = {
   firstName: 'amin',
   lastName: 'gharib',
@@ -178,3 +176,80 @@ const nameKey = 'Name'
 
 console.log(amin[`first${nameKey}`])
 console.log(amin[`last${nameKey}`])
+
+// const interestedIn = prompt(
+//   'What do you want to know about amin? choose between firstName, lastName, birthYear, friends ?'
+// )
+
+// console.log(interestedIn)
+// console.log(amin[interestedIn] ? amin[interestedIn] : "The entered property doesn't exists.")
+
+amin.location = 'Japan'
+amin['twitter'] = 'amindx'
+
+console.log(amin)
+
+console.log(
+  `${amin.firstName} has ${amin.friends.length} friends, and his best friend is called ${amin.friends[0]}.`
+)
+
+
+
+const amin = {
+  firstName: 'amin',
+  lastName: 'gharib',
+  job: 'student',
+  birthYear: 1999,
+  salary: 6000000,
+  studentID: 'SA34567',
+  friends: ['Amir', 'Mohammad', 'Arman'],
+  hasDriversLicence: true,
+
+  calcAge: function (currentYear) {
+    this.age = currentYear - this.birthYear
+    return this.age
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge(2025)}-year old ${this.job}, and he has ${
+      this.hasDriversLicence ? 'a' : 'no'
+    } driver's licence`
+  },
+}
+
+console.log(amin.calcAge(2025))
+console.log(amin.calcAge(2026))
+console.log(amin.calcAge(2027))
+
+console.log(amin.getSummary())
+
+
+
+// LOOPS
+
+// console.log('repetition1')
+// console.log('repetition2')
+// console.log('repetition3')
+// console.log('repetition4')
+// console.log('repetition5')
+// console.log('repetition6')
+// console.log('repetition7')
+// console.log('repetition8')
+// console.log('repetition9')
+// console.log('repetition10')
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`repetiotion ${rep}`)
+}
+
+*/
+
+const aminArray = ['amin', 'gharib', 'student', 1999, 6000000, 'SA34567']
+const types = []
+
+for (let i = 0; i < aminArray.length; i++) {
+  console.log(aminArray[i])
+  types.push(typeof aminArray[i])
+}
+
+console.log(types)
