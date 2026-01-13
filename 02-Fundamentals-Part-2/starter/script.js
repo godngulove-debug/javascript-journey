@@ -242,7 +242,11 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`repetiotion ${rep}`)
 }
 
-*/
+
+
+const calcAge = function (currentYear, birthYear) {
+  return currentYear - birthYear
+}
 
 const aminArray = ['amin', 'gharib', 'student', 1999, 6000000, 'SA34567']
 const types = []
@@ -253,3 +257,53 @@ for (let i = 0; i < aminArray.length; i++) {
 }
 
 console.log(types)
+
+const years = [1991, 2007, 1969, 2020]
+
+const ages = []
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i])
+}
+
+console.log(ages)
+
+for (let i = 0; i < aminArray.length; i++) {
+  if (typeof aminArray[i] !== 'string') continue
+  console.log(aminArray[i])
+  types.push(typeof aminArray[i])
+}
+
+
+
+const aminArray = ['amin', 'gharib', 'student', 1999, ['Mohammad', 'Amir', 'Arman'], 'SA34567']
+
+for (let i = aminArray.length - 1; i >= 0; i--) {
+  console.log(aminArray[i])
+}
+
+for (let i = 0; i < 3; i++) {
+  console.log(`--------------- Starting exercise ${i + 1}`)
+
+  for (let j = 0; j < 5; j++) {
+    console.log(`repetition ${j + 1}`)
+  }
+}
+
+*/
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`repetiotion ${rep}`)
+// }
+
+// let rep = 0
+// while (rep < 10) {
+//   console.log(`repetiotion ${rep}`)
+//   rep++
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1
+while (dice !== 6) {
+  console.log(dice)
+  dice = Math.trunc(Math.random() * 6) + 1
+}
